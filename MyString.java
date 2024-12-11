@@ -75,9 +75,11 @@ public class MyString {
 
         char[] charArray = str.toCharArray();
 
-        char[] strArray = new char[2*charArray.length - 1];
+        char[] strArray = new char[2*charArray.length];
 
-        for(int i = 0; i < charArray.length ; i++){
+        strArray[0] = ' ';
+
+        for(int i = 1; i < charArray.length ; i++){
             
             strArray[2*i] = charArray[i];
             if(i != charArray.length - 1){
