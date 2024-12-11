@@ -73,17 +73,21 @@ public class MyString {
      */
     public static String spacedString(String str) {
 
+        if (str.isEmpty()) {
+            return ""; // Return empty string if input is empty
+        }
+
         char[] charArray = str.toCharArray();
 
-        char[] strArray = new char[2*charArray.length];
+        char[] strArray = new char[2*charArray.length - 1];
 
-        strArray[0] = ' ';
+
 
         for(int i = 0; i < charArray.length ; i++){
             
-            strArray[2*i + 1] = charArray[i];
+            strArray[2*i] = charArray[i];
             if(i != charArray.length - 1){
-            strArray[2*i + 2] = ' ';
+            strArray[2*i + 1] = ' ';
             }
         }
 

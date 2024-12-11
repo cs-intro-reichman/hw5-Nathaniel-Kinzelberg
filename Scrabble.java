@@ -84,6 +84,9 @@ public class Scrabble {
         totalScore += 50;
     }
 
+    // Multiply the score by the number of letters in the word
+    totalScore *= charUsed;
+
     return totalScore;
 
 	}
