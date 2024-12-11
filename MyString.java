@@ -79,11 +79,11 @@ public class MyString {
 
         strArray[0] = ' ';
 
-        for(int i = 1; i < charArray.length ; i++){
+        for(int i = 0; i < charArray.length ; i++){
             
-            strArray[2*i] = charArray[i];
+            strArray[2*i + 1] = charArray[i];
             if(i != charArray.length - 1){
-            strArray[2*i + 1] = ' ';
+            strArray[2*i + 2] = ' ';
             }
         }
 

@@ -67,10 +67,10 @@ public class Scrabble {
 
 		for(int i = 0; i < charArray.length ; i++){
 			if((int) charArray[i] > 64 && charArray[i] < 91){ //adds value of capital letters
-				totalScore = totalScore + SCRABBLE_LETTER_VALUES[(int)charArray[i] - 65];
+				totalScore = totalScore + SCRABBLE_LETTER_VALUES[(int)charArray[i] - 'A'];
 			}
 			if((int) charArray[i] > 96 && charArray[i] < 123){ //adds value of lowercase letters
-				totalScore = totalScore + SCRABBLE_LETTER_VALUES[(int)charArray[i] - 97];
+				totalScore = totalScore + SCRABBLE_LETTER_VALUES[(int)charArray[i] - 'a'];
 			}
 
 		}
