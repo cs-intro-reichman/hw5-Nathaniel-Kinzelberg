@@ -62,30 +62,30 @@ public class Scrabble {
 	// If the word includes the sequence "runi", adds 1000 points to the game.
 	public static int wordScore(String word) {
 		int totalScore = 0;
-		char[] charArray = word.toCharArray();
-		int charUsed = charArray.length;
+    char[] charArray = word.toCharArray();
+    int charUsed = charArray.length;
 
-		for(int i = 0; i < charArray.length ; i++){
-			if((int) charArray[i] > 64 && charArray[i] < 91){ //adds value of capital letters
-				totalScore = totalScore + SCRABBLE_LETTER_VALUES[(int)charArray[i] - 'A'];
-			}
-			if((int) charArray[i] > 96 && charArray[i] < 123){ //adds value of lowercase letters
-				totalScore = totalScore + SCRABBLE_LETTER_VALUES[(int)charArray[i] - 'a'];
-			}
+    for (int i = 0; i < charArray.length; i++) {
+        // Convert character to lowercase to ensure consistent handling for scoring
+        char currentChar = Character.toLowerCase(charArray[i]);
+        
+        if (currentChar >= 'a' && currentChar <= 'z') {
+            totalScore += SCRABBLE_LETTER_VALUES[currentChar - 'a']; // Get letter value from array
+        }
+    }
 
-		}
+    // Check if the word contains "runi" for the 1000-point bonus
+    if (word.toLowerCase().contains("runi")) {
+        totalScore += 1000;
+    }
 
-		if (word.toLowerCase().contains("runi")) {
-			totalScore += 1000;
-		}
-	
-		
-		if (charUsed == HAND_SIZE) {
-			totalScore += 50;
-		}
+    // Check if the word's length equals HAND_SIZE for the 50-point bonus
+    if (charUsed == HAND_SIZE) {
+        totalScore += 50;
+    }
 
+    return totalScore;
 
-		return totalScore;
 	}
 
 	// Creates a random hand of length (HAND_SIZE - 2) and then inserts
