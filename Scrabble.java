@@ -136,8 +136,7 @@ public class Scrabble {
             }
 
             if (!isWordInDictionary(input)) {
-                System.out.println("No such word in the dictionary. Try again.");
-				System.out.println();
+                System.out.println("Invalid word. Try again.");
                 continue;
             }
 

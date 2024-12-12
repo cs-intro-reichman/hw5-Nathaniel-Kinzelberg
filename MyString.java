@@ -73,9 +73,11 @@ public class MyString {
      */
     public static String spacedString(String str) {
 
+
+        
         if (str.isEmpty()) {
             return ""; // Return empty string if input is empty
-        }
+        } 
 
         char[] charArray = str.toCharArray();
 
