@@ -167,6 +167,7 @@ public class Scrabble {
             System.out.println("Ran out of letters. Total score: " + score + " points");
         } else {
             System.out.println("End of hand. Total score: " + score + " points");
+			System.out.println();
         }
     }
 	// Plays a Scrabble game. Prompts the user to enter 'n' for playing a new hand, or 'e'
@@ -184,7 +185,6 @@ public class Scrabble {
 			// the user until the user enter the ENTER character.
 			String input = in.readString();
 			if (input.equals("e")) {
-                System.out.println("Game over. Thanks for playing!");
                 break;
             }
 
