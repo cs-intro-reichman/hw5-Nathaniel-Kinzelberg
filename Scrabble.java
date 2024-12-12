@@ -159,6 +159,7 @@ public class Scrabble {
                 int wordPoints = wordScore(input);
                 score += wordPoints;
                 System.out.println(input + " earned " + wordPoints + " points. Score: " + score + " points");
+				System.out.println();
                 hand = tempHand;
             }
         }
@@ -167,7 +168,6 @@ public class Scrabble {
             System.out.println("Ran out of letters. Total score: " + score + " points");
         } else {
             System.out.println("End of hand. Total score: " + score + " points");
-			System.out.println();
         }
     }
 	// Plays a Scrabble game. Prompts the user to enter 'n' for playing a new hand, or 'e'
