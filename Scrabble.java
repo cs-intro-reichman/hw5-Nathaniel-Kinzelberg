@@ -158,7 +158,7 @@ public class Scrabble {
             if (isValid) {
                 int wordPoints = wordScore(input);
                 score += wordPoints;
-                System.out.println("You scored " + wordPoints + " points for that word.");
+                System.out.println(input + " earned " + wordPoints + " points. Score: " + score + " points");
                 hand = tempHand;
             }
         }
